@@ -2,7 +2,7 @@
 Beadandó webfejlesztésből
 Készítő: Goldfinger Laura
 
-URL: https://https://goldfingerlaura.github.io/webfejlesztes-beadando/allatmenhely.html
+URL: https://goldfingerlaura.github.io/webfejlesztes-beadando/allatmenhely.html
 
 Egy állatmenhely weboldala, különböző örökbefogadható állatokkal és kóbor állat bejelentő űrlappal. A saját interaktív program egy étel adagoló kalkulátor.
 
