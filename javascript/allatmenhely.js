@@ -49,7 +49,7 @@ form.addEventListener("submit", function(event) {
     };
 
     if (!formTerms.checked) {
-        formTermsError.textContent = "A beküldéshez el kell fogadnia a felhasználási feltételeket!";
+        formTermsError.textContent = "El kell fogadnia a felhasználási feltételeket!";
         isValid = false;
     };
 
@@ -62,3 +62,4 @@ form.addEventListener("submit", function(event) {
     }
 
 })
+
