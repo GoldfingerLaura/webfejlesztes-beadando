@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <title>Tappancs Állatmenhely</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="title" content="Tappancs Állatmenhely">
+        <meta name="description" content="A Tappancs Állatmenhely kóbor állat bejelentő űrlapja">
+        <meta name="author" content="Goldfinger Laura">
+        <link rel="icon" href="képek/favicon.ico">
+        <link rel="stylesheet" href="css/allatmenhely.css">
+        <script src="javascript/allatmenhely.js" defer></script>
+        <script src="javascript/menu.js" defer></script>
+    </head>
+
+    <body class="rubik-font">
+
+        <header>
+            <h1><a href="allatmenhely.html">Tappancs Állatmenhely</a></h1>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </header>
+
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="allatmenhely.html">Főoldal</a></li>
+                <li><a href="allatmenhely_allataink.html">Állataink</a></li>
+                <li><a href="#">Kóbor állat bejelentése</a></li>
+                <li><a href="allatmenhely_eteladagolo.html">Étel adagoló kalkulátor</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Kóbor állat bejelentése</h2>
+            <form action="https://httpbin.org/post" method="post" id="fullform">
+
+                <div class="form-group">
+                    <label for="name">Teljes név:</label>
+                    <input type="text" id="name" name="name" placeholder="Pl. Minta Márk">
+                    <div id="nameerror" class="error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email cím:</label>
+                    <input type="email" id="email" name="email" placeholder="pelda@mail.com">
+                    <div id="emailerror" class="error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefonszám (utolsó 9 számjegy)</label>
+                    <input type="number" id="telszam">
+                    <div id="telszamerror" class="error"></div>
+                </div>
+
+                <div class="form-group radio-group">
+                    <label>Állat fajtája:</label>
+                    <div class="opcio">
+                        <input type="radio" id="kutya" name="fajta" value="kutya">
+                        <label for="kutya">Kutya</label>
+                    </div>
+                    <div class="opcio">
+                        <input type="radio" id="macska" name="fajta" value="macska">
+                        <label for="macska">Macska</label>
+                    </div>
+                    <div class="opcio">
+                        <input type="radio" id="nyul" name="fajta" value="nyul">
+                        <label for="nyul">Nyúl</label>
+                    </div>
+                    <div class="opcio">
+                        <input type="radio" id="egyeb" name="fajta" value="egyeb">
+                        <label for="egyeb">Egyéb</label>
+                    </div>
+                    <div id="fajtaerror" class="error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Mikor találta az állatot?</label>
+                    <input type="date" id="datum">
+                    <div id="dateerror" class="error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Melyik telephelyünk van legközelebb Önhöz?</label>
+                    <select id="telephely">
+                        <option value="">Válasszon telephelyet</option>
+                        <option>Budapest</option>
+                        <option>Szeged</option>
+                        <option>Veszprém</option>
+                    </select>
+                    <div id="telephelyerror" class="error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Rövid leírás az állatról (max 200 karakter):</label>
+                    <textarea rows="4" cols="30" id="leiras"></textarea>
+                    <div id="leiraserror" class="error"></div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <div class="opcio">
+                        <input type="checkbox" id="aszf">
+                        <label>Elfogadom az Általános Felhasználási Feltételeket</label>
+                    </div>
+                    <div class="opcio">
+                        <input type="checkbox" id="hirlevel">
+                        <label>Feliratkozom a Tappancs Állatmenhely Hírlevelére</label>
+                    </div>
+                    <div id="termserror" class="error"></div>
+                </div>
+
+                <button type="submit">Küldés</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Goldfinger Laura</p>
+        </footer>
+    </body>
+</html>
