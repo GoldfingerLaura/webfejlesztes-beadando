@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
     };
 
     if (Number(formTelszam.value.length) != 9 ) {
-        formTelszamError.textContent = "A telefonszám megadása kötelező és 9 számjegyből kell állnia!";
+        formTelszamError.textContent = "A 9 számjegyes telefonszám megadása kötelező!";
         isValid = false;
     };
 
@@ -60,4 +60,5 @@ form.addEventListener("submit", function(event) {
         // Ha minden OK, engedjük tovább a httpbin-re
         console.log("Minden adat rendben, küldés...");
     }
+
 })
